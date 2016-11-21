@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "tadayExamViewController.h"
+
 
 @interface ViewController ()
 
@@ -16,7 +18,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    self.navigationItem.title = @"我是标题";
+    
+    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(60, 120, 50, 70)];
+    [btn setTitle:@"进入" forState:UIControlStateNormal];
+    [btn setBackgroundColor:[UIColor orangeColor]];
+    [btn addTarget:self action:@selector(optenClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn];
+    
+    
+    
+
+}
+
+
+-(void)optenClick{
+
+    tadayExamViewController *vc = [[tadayExamViewController alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
+    
 }
 
 - (void)didReceiveMemoryWarning {
