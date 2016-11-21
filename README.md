@@ -1,0 +1,3 @@
+# CollectionAndTableview
+tableview在collectionView上做的答题卡
+实现答案的多选和单选，记录保存答案。自适应了cell的高度。类似驾校宝典的中的答题
